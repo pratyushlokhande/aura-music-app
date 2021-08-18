@@ -3,6 +3,7 @@ import React from "react";
 import LibrarySong from "./LibrarySong";
 
 const Library = ({
+  currentSong,
   songs,
   setCurrentSong,
   audioRef,
@@ -17,6 +18,7 @@ const Library = ({
         {songs.map((song) => (
           <LibrarySong
             song={song}
+            currentSong={currentSong}
             songs={songs}
             setCurrentSong={setCurrentSong}
             audioRef={audioRef}
