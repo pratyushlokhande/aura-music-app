@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aura-music-app/static/css/main.36727f8b.chunk.css",
+    "main.js": "/aura-music-app/static/js/main.6f2ef8d6.chunk.js",
+    "main.js.map": "/aura-music-app/static/js/main.6f2ef8d6.chunk.js.map",
+    "runtime-main.js": "/aura-music-app/static/js/runtime-main.a0b6c5b4.js",
+    "runtime-main.js.map": "/aura-music-app/static/js/runtime-main.a0b6c5b4.js.map",
+    "static/js/2.8ded4a2c.chunk.js": "/aura-music-app/static/js/2.8ded4a2c.chunk.js",
+    "static/js/2.8ded4a2c.chunk.js.map": "/aura-music-app/static/js/2.8ded4a2c.chunk.js.map",
+    "static/js/3.d93e4a08.chunk.js": "/aura-music-app/static/js/3.d93e4a08.chunk.js",
+    "static/js/3.d93e4a08.chunk.js.map": "/aura-music-app/static/js/3.d93e4a08.chunk.js.map",
+    "index.html": "/aura-music-app/index.html",
+    "static/css/main.36727f8b.chunk.css.map": "/aura-music-app/static/css/main.36727f8b.chunk.css.map",
+    "static/js/2.8ded4a2c.chunk.js.LICENSE.txt": "/aura-music-app/static/js/2.8ded4a2c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0b6c5b4.js",
+    "static/js/2.8ded4a2c.chunk.js",
+    "static/css/main.36727f8b.chunk.css",
+    "static/js/main.6f2ef8d6.chunk.js"
+  ]
+}
