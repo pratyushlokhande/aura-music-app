@@ -10,7 +10,8 @@ const Nav = ({ setLibraryStatus, libraryStatus }) => {
   return (
     <nav>
       <h1>
-        <FontAwesomeIcon icon={faHeadphones}></FontAwesomeIcon> &nbsp; Waves
+        <FontAwesomeIcon size="sm" icon={faHeadphones}></FontAwesomeIcon> &nbsp;
+        Aura
       </h1>
       <button
         className={libraryStatus ? "library-active" : ""}

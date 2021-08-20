@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./styles/app.scss";
 //Import Components
 import Player from "./components/Player";
@@ -24,6 +24,7 @@ function App() {
     volume: 0,
   });
   const [libraryStatus, setLibraryStatus] = useState(false);
+  const [bodyBg, setBodyBg] = useState("#11052c");
 
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
@@ -49,10 +50,34 @@ function App() {
 
   const bg = {
     backgroundImage: `url(${currentSong.cover})`,
+    clipPath: `circle(${(isPlaying ? 100 : 0) + "%"} at 50% 50%)`,
   };
 
+  const getColor = () => {
+    const colors = [
+      "#11052C",
+      "#1B2021",
+      "#261C2C",
+      "#003638",
+      "#171010",
+      "#171717",
+      "#0A1D37",
+      "#0A1931",
+    ];
+
+    return colors[(Math.random() * colors.length) | 0];
+  };
+
+  // Use Effect
+  useEffect(() => {
+    setBodyBg(getColor);
+  }, [currentSong]);
+
   return (
-    <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+    <div
+      style={{ backgroundColor: bodyBg }}
+      className={`App ${libraryStatus ? "library-active" : ""}`}
+    >
       <div style={bg} className="overlay"></div>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song isPlaying={isPlaying} currentSong={currentSong} />

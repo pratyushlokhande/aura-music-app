@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
 nav {
   position: relative;
   z-index: 10;
@@ -8,8 +10,9 @@ nav {
   color: #fff;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    font-family: "Rock Salt", cursive;
   }
 
   button {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+
 .song-container {
   position: relative;
   z-index: 10;
@@ -7,7 +9,10 @@
   justify-content: center;
   align-items: center;
   img {
-    width: 25%;
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     transition: all 2s ease;
     box-shadow: 2px 2px 50px rgb(0, 0, 0);
@@ -16,6 +21,8 @@
   h2 {
     padding: 3rem 1rem 1rem 1rem;
     color: #fff;
+    font-family: "Covered By Your Grace", cursive;
+    letter-spacing: 2px;
   }
   h3 {
     font-size: 1rem;
@@ -26,7 +33,8 @@
 @media screen and (max-width: 768px) {
   .song-container {
     img {
-      width: 60%;
+      width: 60vw;
+      height: 60vw;
     }
   }
 }
