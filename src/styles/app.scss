@@ -1,36 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
-  color: rgb(84, 84, 84);
-}
-
 body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+.App {
+  position: relative;
+  transition: all 0.5s ease;
+  height: 100vh;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: blur(3px) grayscale(75%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.library-active {
+  margin-left: 20%;
 }
 
+h1 {
+  font-size: 1rem;
+}
+h2 {
+  color: rgb(51, 51, 51);
+}
 h3,
 h4 {
+  color: rgb(100, 100, 100);
   font-weight: 400;
-  color: rgb(99, 99, 99);
 }
 
-@import "./player";
 @import "./song";
-@import "./Library";
+@import "./player";
+@import "./library";
 @import "./nav";
-
-.App {
-  transition: all 0.5s ease;
-}
-
-.library-active {
-  margin-left: 30%;
-}

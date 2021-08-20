@@ -1,46 +1,49 @@
 import React from "react";
+import { playAudio } from "../util";
 
 const LibrarySong = ({
-  song,
-  currentSong,
-  songs,
+  name,
+  artist,
+  cover,
+  id,
   setCurrentSong,
+  songs,
   audioRef,
   isPlaying,
   setSongs,
+  active,
 }) => {
-  const currentSongHandler = async () => {
-    await setCurrentSong({ ...song, active: true });
-
-    // Add Active State
-    const newSongs = songs.map((s) => {
-      if (s.id === song.id) {
+  const songSelectHandler = () => {
+    const selectedSong = songs.filter((state) => state.id === id);
+    setCurrentSong({ ...selectedSong[0] });
+    //Set Active in library
+    const newSongs = songs.map((song) => {
+      if (song.id === id) {
         return {
-          ...s,
+          ...song,
           active: true,
         };
       } else {
         return {
-          ...s,
+          ...song,
           active: false,
         };
       }
     });
-
     setSongs(newSongs);
 
-    if (isPlaying) audioRef.current.play();
+    //Play audio
+    playAudio(isPlaying, audioRef);
   };
-
   return (
     <div
-      onClick={currentSongHandler}
-      className={`library-song ${song.active ? "selected" : ""}`}
+      onClick={songSelectHandler}
+      className={`library-song ${active ? "selected" : ""}`}
     >
-      <img src={song.cover} alt={song.name} />
-      <div className="song-discription">
-        <h3>{song.name}</h3>
-        <h4>{song.artist}</h4>
+      <img src={cover} alt="" />
+      <div className="song-description">
+        <h3>{name}</h3>
+        <h4>{artist}</h4>
       </div>
     </div>
   );

@@ -1,21 +1,25 @@
 .song-container {
+  position: relative;
+  z-index: 10;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   img {
-    width: 20%;
+    width: 25%;
     border-radius: 50%;
+    transition: all 2s ease;
+    box-shadow: 2px 2px 50px rgb(0, 0, 0);
+    border: 10px solid #fff;
   }
-
   h2 {
     padding: 3rem 1rem 1rem 1rem;
+    color: #fff;
   }
-
   h3 {
     font-size: 1rem;
+    color: rgb(156, 156, 156);
   }
 }
 
@@ -25,4 +29,17 @@
       width: 60%;
     }
   }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateSong {
+  animation: rotate 20s linear forwards infinite;
 }

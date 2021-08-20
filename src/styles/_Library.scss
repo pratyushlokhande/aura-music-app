@@ -1,48 +1,60 @@
 .library {
   position: fixed;
+  z-index: 10;
+  box-shadow: 2px 2px 50px rgb(0, 0, 0);
+  // border-radius: 1rem;
   top: 0;
   left: 0;
   width: 20rem;
   height: 100%;
-  box-shadow: 2px 2px 5px rgb(148, 148, 148);
   overflow: scroll;
+  background: white;
   transform: translateX(-100%);
-  opacity: 0;
-  background: #fff;
   transition: all 0.5s ease;
+  opacity: 0;
 
-  h2 {
+  .library-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 2rem;
   }
 }
 
 .library-song {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   cursor: pointer;
-  transition: background 0.5s ease;
-  img {
-    width: 20%;
-  }
+  transition: all 0.75s ease-out;
 
+  img {
+    width: 30%;
+  }
   &:hover {
-    background: rgb(214, 224, 255);
+    background: rgb(235, 235, 235);
   }
 }
-
-.song-discription {
+.song-description {
   padding-left: 1rem;
-
   h3 {
     font-size: 1rem;
   }
-
   h4 {
     font-size: 0.7rem;
   }
 }
 
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+/* Works on Chrome/Edge/Safari */
 *::-webkit-scrollbar {
   width: 5px;
 }
@@ -50,17 +62,16 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: rgba(155, 155, 155, 0.5);
+  background-color: rgba(155, 155, 155, 0.7);
   border-radius: 20px;
   border: transparent;
 }
 
 .selected {
-  background: rgba(124, 134, 228, 0.5);
+  background: rgb(194, 208, 253);
 }
-
 .active-library {
-  transform: translateX(0);
+  transform: translateX(0%);
   opacity: 1;
 }
 
